@@ -26,10 +26,12 @@ for (let i = 0; i < size**2; ++i){
 
 }
 
-
-
+let rows = document.getElementsByClassName("row");
+console.log(rows);
 grid.addEventListener("mouseover",(event)=>{
-    if (event.target != grid){
+    console.log(event);
+    console.log( event.target.classList.contains(".row"));
+    if (event.target != grid ){
         event.target.classList.add("hoverColor");
 
     }
