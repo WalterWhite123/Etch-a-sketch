@@ -92,9 +92,9 @@ colors.addEventListener("click",(event)=>{
         blue = 255;
     }
     if (id == "green"){
-        red = 0;
-        green = 255;
-        blue = 0;
+        red = 40;
+        green = 114;
+        blue = 51;
     }
 
      if (id == "purple"){
@@ -134,14 +134,31 @@ colors.addEventListener("click",(event)=>{
     }
 })
 
+// SI une touchee est maintenue, je veux que l'event ne se répande plus
+
+let drawing = 0;
+//focus thingy
+document.body.addEventListener("keydown",()=>{
+    drawing = 1
+  
+})
+
+document.body.addEventListener("keyup",()=>{
+    drawing = 0;
+})
 
 grid.addEventListener("mouseover",(event)=>{
+          
     if (event.target != grid ){
-        
         // event.target.classList.add("hoverColor");
+        if (drawing == 1){
+            event.target.style.cssText=`background-color:rgb(${red}, ${green}, ${blue})`;
+
+
+        }
 
        
-        event.target.style.cssText=`background-color:rgb(${red}, ${green}, ${blue})`;
+        
     }
     
 })

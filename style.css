@@ -39,6 +39,10 @@
     padding: 16px 62px;
 }
 
+#resize:hover{
+    background-color: grey;
+    color:white;
+}
 .wrapper{
     display: flex;
     justify-content: center;
@@ -136,10 +140,10 @@
 }
 
 #pink{
-    background-color: pink;
+    background-color: rgb(251,116,168);
 }
 #pink:hover{
-    background-color: rgba(255, 192, 203, 0.602);
+    background-color: rgba(251, 116, 168, 0.642);
     border:0px;
 }
 #grey{
@@ -156,3 +160,7 @@
     background-color: rgba(0, 0, 0, 0.514);
     border:0px;
 }
+
+
+
+
