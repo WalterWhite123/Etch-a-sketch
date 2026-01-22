@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    
 }
 
 .grid{
@@ -39,7 +40,6 @@
 }
 
 .wrapper{
-    border: 2px solid black;
     display: flex;
     justify-content: center;
     
@@ -66,16 +66,21 @@
 .eraser img{
     margin:0px 50px;
 }
+.eraser img:hover{
+    width: 53px;
+    margin:0px 50px;
+}
 
 .colors{
     
     display: flex;
     flex-direction:column;
-
+    gap:2px;
 }
 
 .row-color{
     display: flex;
+    gap: 2px;
 }
 #red,#green,#blue,#purple,#yellow,#orange,#pink,#black,#grey{
     padding: 12px 12px;
@@ -88,31 +93,66 @@
 #red{
     background-color: red;
 }
+#red:hover{
+    background-color: rgba(255, 21, 21, 0.712);
+    border: 0px;
+}
 #green{
     background-color: green;
+}
+#green:hover{
+    background-color: rgba(0, 128, 0, 0.536);
+    border:0px;
 }
 
 #blue{
     background-color: blue;
 }
+#blue:hover{
+    background-color: rgba(0, 0, 255, 0.533);
+    border:0px;
+}
 
 #purple{
     background-color: purple;
 }
+#purple:hover{
+    background-color: rgba(128, 0, 128, 0.762);
+    border:0px;
+}
 #yellow{
     background-color: yellow;
+}
+#yellow:hover{
+    background-color: rgba(255, 255, 0, 0.541);
+    border:0px;
 }
 #orange{
     background-color: orange;
 }
-
+#orange:hover{
+    background-color: rgba(255, 166, 0, 0.571);
+    border:0px;
+}
 
 #pink{
     background-color: pink;
 }
+#pink:hover{
+    background-color: rgba(255, 192, 203, 0.602);
+    border:0px;
+}
 #grey{
     background-color: grey;
 }
+#grey:hover{
+    background-color: grey;
+    border:0px;
+}
 #black{
     background-color: black;
+}
+#black:hover{
+    background-color: rgba(0, 0, 0, 0.514);
+    border:0px;
 }
