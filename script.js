@@ -61,18 +61,84 @@ for (let i = 0; i < size**2; ++i){
 }
 
 
-function randomColorNumber(){
-    return Math.floor(Math.random()*256);
-}
+// function randomColorNumber(){
+//     return Math.floor(Math.random()*256);
+// }
+
+
+
+//Creer une référence a colors
+// je mets un capteur au niveau de colors 
+// grace au bubbling je sais quel bouton a appuyé
+// si mon element a l'id vert je modifie red green blue pour faire du vert
+
+
+let red;
+let green;
+let blue;
+
+
+let colors = document.querySelector(".colors");
+colors.addEventListener("click",(event)=>{
+
+    let id = event.target.getAttribute("id");
+    
+    if (id == "red"){
+        red = 255;
+        green = 0;
+        blue = 0;
+    }
+    if (id == "blue"){
+        red = 0;
+        green = 0;
+        blue = 255;
+    }
+    if (id == "green"){
+        red = 0;
+        green = 255;
+        blue = 0;
+    }
+
+     if (id == "purple"){
+        red = 160;
+        green = 32;
+        blue = 240;
+    }
+    if (id == "yellow"){
+        red = 253;
+        green = 216;
+        blue = 8;
+    }
+    if (id == "orange"){
+        red = 255;
+        green = 128;
+        blue = 0;
+    }
+    if (id == "pink"){
+        red = 251;
+        green = 116;
+        blue = 168;
+    }
+    if (id == "grey"){
+        red = 123;
+        green = 123;
+        blue = 125;
+    }
+    if (id == "black"){
+        red = 0;
+        green = 0;
+        blue = 0;
+    }
+
+})
+
 
 let rows = document.getElementsByClassName("row");
 grid.addEventListener("mouseover",(event)=>{
     if (event.target != grid ){
         // event.target.classList.add("hoverColor");
 
-        let red = randomColorNumber();
-        let green = randomColorNumber();
-        let blue = randomColorNumber();
+       
         event.target.style.cssText=`background-color:rgb(${red}, ${green}, ${blue})`;
     }
     
