@@ -138,12 +138,12 @@ colors.addEventListener("click",(event)=>{
 
 let drawing = 0;
 //focus thingy
-document.body.addEventListener("keydown",()=>{
+document.addEventListener("keydown",()=>{
     drawing = 1
   
 })
 
-document.body.addEventListener("keyup",()=>{
+document.addEventListener("keyup",()=>{
     drawing = 0;
 })
 

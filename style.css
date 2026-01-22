@@ -65,7 +65,7 @@
 }
 
 .eraser{
-    margin-top:25vh;
+    margin-top:15vh;
 }
 .eraser img{
     margin:0px 50px;
@@ -79,6 +79,7 @@
     
     display: flex;
     flex-direction:column;
+    align-items: center;
     gap:2px;
 }
 
