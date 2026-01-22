@@ -33,7 +33,9 @@ display16();
 
 
 function grille(){
+    // erase the already there grid
     erase();
+    //take number of case per side by the user 
 let size = prompt("How many number of square per side: (between: 0-100)");
 
 while (size < 0 || size > 100){
@@ -58,11 +60,20 @@ for (let i = 0; i < size**2; ++i){
 
 }
 
+
+function randomColorNumber(){
+    return Math.floor(Math.random()*256);
+}
+
 let rows = document.getElementsByClassName("row");
 grid.addEventListener("mouseover",(event)=>{
     if (event.target != grid ){
-        event.target.classList.add("hoverColor");
+        // event.target.classList.add("hoverColor");
 
+        let red = randomColorNumber();
+        let green = randomColorNumber();
+        let blue = randomColorNumber();
+        event.target.style.cssText=`background-color:rgb(${red}, ${green}, ${blue})`;
     }
     
 })
