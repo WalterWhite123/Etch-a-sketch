@@ -78,11 +78,9 @@ let green;
 let blue;
 
 
-let colors = document.querySelector(".colors");
+let colors = document.querySelector(".features");
 colors.addEventListener("click",(event)=>{
-
     let id = event.target.getAttribute("id");
-    
     if (id == "red"){
         red = 255;
         green = 0;
@@ -129,13 +127,17 @@ colors.addEventListener("click",(event)=>{
         green = 0;
         blue = 0;
     }
-
+    if (id == "eraser"){
+        red = 255;
+        green = 255;
+        blue = 255
+    }
 })
 
 
-let rows = document.getElementsByClassName("row");
 grid.addEventListener("mouseover",(event)=>{
     if (event.target != grid ){
+        
         // event.target.classList.add("hoverColor");
 
        
